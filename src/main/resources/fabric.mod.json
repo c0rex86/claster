@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "claster",
+  "version": "${version}",
+  "name": "Claster Client",
+  "description": "Advanced Minecraft client by c0re",
+  "authors": [
+    "c0re"
+  ],
+  "contact": {
+    "homepage": "https://github.com/c0rex86/claster",
+    "sources": "https://github.com/c0rex86/claster"
+  },
+  "license": "MIT",
+  "icon": "assets/claster/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "me.c0re.claster.ClasterClient"
+    ]
+  },
+  "mixins": [
+    "claster.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.22",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+} 

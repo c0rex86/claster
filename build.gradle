@@ -1,0 +1,32 @@
+plugins {
+    id 'fabric-loom' version '1.4-SNAPSHOT'
+    id 'maven-publish'
+}
+
+version = "1.0.0"
+group = "me.c0re.claster"
+
+repositories {
+    maven { url 'https://maven.fabricmc.net/' }
+    maven { url 'https://repo.maven.apache.org/maven2/' }
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.20.1"
+    mappings "net.fabricmc:yarn:1.20.1+build.10:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.14.24"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.91.0+1.20.1"
+    
+    // Дополнительные библиотеки
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'org.slf4j:slf4j-api:2.0.7'
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+} 
