@@ -1,8 +1,3 @@
-# Cluster
-Go web server 
-
-Example:
-```yaml
 server:
   port: 443
   ssl:
@@ -13,5 +8,4 @@ server:
     - name: "example.com"
       enabled: true
     - name: "api.example.com"
-      enabled: true
-``` 
+      enabled: true 
